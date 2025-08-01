@@ -1,0 +1,27 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "do-playground",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-07-03",
+	"compatibility_flags": ["nodejs_compat"],
+	"vars": {
+		"MY_KV_NAME": "MY_KV",
+	},
+	"migrations": [
+		{
+			"new_sqlite_classes": ["MyDurableObject"],
+			"tag": "v1",
+		},
+	],
+	"durable_objects": {
+		"bindings": [
+			{
+				"class_name": "MyDurableObject",
+				"name": "MY_DURABLE_OBJECT",
+			},
+		],
+	},
+	"observability": {
+		"enabled": true,
+	},
+}
