@@ -32,6 +32,8 @@
 		/* Ensure that casing is correct in imports. */
 		"forceConsistentCasingInFileNames": true,
 
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
 		/* Enable all strict type-checking options. */
 		"strict": true,
 
